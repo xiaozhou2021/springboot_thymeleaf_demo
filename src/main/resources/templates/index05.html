@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/pages-cart.css" th:href="@{/css/pages-cart.css}"/>
+</head>
+<body>
+    <h1 th:if="${flag=='yes'}">王者荣耀</h1>
+    <h1 th:unless="${flag=='yes'}">射手</h1>
+
+    <div th:switch="${menu}">
+        <span th:case="admin">user id admin</span>
+        <span th:case="${manager}">user id manager</span>
+    </div>
+
+
+<!--引入片段-->
+    <!-- 把片段的内容插入到当前位置 -->
+    <div th:insert="~{footer :: copy}"></div>
+    </br>
+    <!-- 使用片段的内容替换当前标签 -->
+    <div th:replace="~{footer :: copy}"></div>
+    </br>
+    <!-- 保留自己的主标签，不要片段的主标签 -->
+    <div th:include="~{footer :: copy}"></div>
+
+</body>
+</body>
+</html>

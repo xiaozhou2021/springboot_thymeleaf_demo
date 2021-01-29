@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    信息:<input type="text" th:value="${message}">
+    <!--字符串拼接方式一-->
+    <span th:text="'瑶:' +${message}"></span>
+    <br>
+    <!--字符串拼接方式二-->
+    <span th:text="|瑶${message}|"></span>
+</body>
+</html>
