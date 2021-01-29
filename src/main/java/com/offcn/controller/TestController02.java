@@ -9,5 +9,6 @@ package com.offcn.controller;
 public class TestController02 {
 
     public void test(){
+        System.out.println("愿无岁月可回首,且以深情共白头");
     }
 }
